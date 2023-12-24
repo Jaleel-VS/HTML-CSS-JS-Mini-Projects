@@ -1,0 +1,18 @@
+/* import roboto */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+* {
+    box-sizing: border-box; /* This makes sure that padding and border are included in the element's total width and height */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex; /* This makes sure that the body element is a flex container */
+    flex-direction: column; /* This makes sure that the flex items are stacked vertically */
+    justify-content: center; /* This aligns the flex items vertically */
+    align-items: center; /* This aligns the flex items horizontally */
+    height: 85vh; /* This makes sure that the body element is as high as the viewport */
+    overflow: hidden; /* This hides the scrollbars of the body element */
+    margin: 0; /* This removes the default margin of the body element */
+}
