@@ -1,0 +1,63 @@
+/* import roboto */
+
+@import url('https://fonts.googleapis.com/css?family=Muli:400,700');
+
+* {
+    box-sizing: border-box; /* This makes sure that padding and border are included in the element's total width and height */
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    display: flex; /* This makes sure that the body element is a flex container */
+    justify-content: center; /* This aligns the flex items vertically */
+    align-items: center; /* This aligns the flex items horizontally */
+    height: 85vh; /* This makes sure that the body element is as high as the viewport */
+    overflow: hidden; /* This hides the scrollbars of the body element */
+    margin: 0; /* This removes the default margin of the body element */
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+}
+.panel {
+    background-size: auto 100%; /* This makes sure that the background image is always 100% of the panel's height */
+    background-position: center; /* This makes sure that the background image is always centered */
+    background-repeat: no-repeat; /* This makes sure that the background image is not repeated */
+    height: 80vh;
+    border-radius: 50px;
+    cursor: pointer;
+    color: aliceblue;
+    flex: 0.5;
+    margin: 10px;
+    position: relative; 
+    transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media(max-width: 480px) {
+    .container {
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),.panel:nth-of-type(5) {
+        display: none;
+    }
+}
